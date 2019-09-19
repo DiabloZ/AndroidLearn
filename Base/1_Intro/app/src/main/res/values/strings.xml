@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Lesson_1</string>
+    <string name="app_name">Weather</string>
     <string name="hello_world">Hello World!Hello Hello World!android:text=Hello World!</string>
     <string name="good_morning">Good morning GeekBrains!</string>
     <string name="good_afternoon">Good afternoon GeekBrains!</string>

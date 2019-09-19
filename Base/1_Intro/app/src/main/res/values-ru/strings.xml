@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Погода</string>
     <string name="hello_world">Дароууууу</string>
     <string name="good_morning">Добрейшего утра, GeekBrains!</string>
     <string name="good_afternoon">Добрейшего дня, GeekBrains!</string>
