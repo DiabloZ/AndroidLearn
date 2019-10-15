@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="currentCity">Москва</string>
+    <string name="statusWeather">Солнечно</string>
+    <string name="sunnyForWeather">Солнце для погоды</string>
+    <string name="windForWeather">Ветер для погоды</string>
+    <string name="humidityForWeather">Влажность для погоды</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="helpInputCity">Введите название города</string>
+</resources>

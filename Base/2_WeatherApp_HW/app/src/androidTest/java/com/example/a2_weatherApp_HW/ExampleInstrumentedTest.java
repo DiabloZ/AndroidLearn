@@ -1,6 +1,7 @@
-package com.example.a2_weatherapp_hw;
+package com.example.a2_weatherApp_HW;
 
 import android.content.Context;
+
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 

@@ -1,4 +1,18 @@
 <resources>
-    <string name="app_name">2_WeatherApp_HW</string>
+    <string name="app_name" translatable="false">2_WeatherApp_HW</string>
     <string name="currentCity">Moscow</string>
+    <string name="statusWeather">Sunny</string>
+    <string name="celsiusWeather" translatable="false">18</string>
+    <string name="unitWeatherCelsius" translatable="false">°C</string>
+    <string name="upperLineWeatherToday" translatable="false">↑19°</string>
+    <string name="bottomLineWeatherToday" translatable="false">↓17°</string>
+    <string name="humidity" translatable="false">80%</string>
+    <string name="windSpeed" translatable="false">3.4 m/s</string>
+    <string name="chanceOfRain" translatable="false">5%</string>
+    <string name="sunnyForWeather">sunForWeather</string>
+    <string name="windForWeather">windForWeather</string>
+    <string name="humidityForWeather">humidityForWeather</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="helpInputCity">Введите название города</string>
 </resources>

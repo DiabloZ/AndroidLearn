@@ -33,8 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/changeCity">
 
         <Button
-            android:id="@+id/sendCity"
-            style="@style/Widget.AppCompat.Button"
+            android:id="@+id/okMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -44,7 +43,6 @@
             android:textColorHighlight="#CCFF90"
             android:textColorHint="#A7FFEB"
             android:textColorLink="#4CAF50"
-            android:textCursorDrawable="#33691E"
             android:textStyle="bold" />
 
 
