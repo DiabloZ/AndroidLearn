@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">2_WeatherApp_HW</string>
+    <string name="currentCity">Moscow</string>
+</resources>
