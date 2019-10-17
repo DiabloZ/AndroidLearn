@@ -31,45 +31,44 @@
                 android:layout_marginTop="50dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.429"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
 
-
                 <TextView
-                    android:drawableStart="@drawable/ic_wb_sunny_20px"
-                    android:drawablePadding="10dp"
                     android:id="@+id/chanceOfRain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
+                    android:drawableStart="@drawable/rain"
+                    android:drawablePadding="10dp"
                     android:text="@string/chanceOfRain"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:drawableStart="@drawable/ic_wind"
-                    android:drawablePadding="10dp"
                     android:id="@+id/speedWind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
+                    android:drawableStart="@drawable/ic_wind"
+                    android:drawablePadding="10dp"
                     android:text="@string/windSpeed"
                     android:textSize="20sp" />
 
 
-
                 <TextView
-                    android:drawableStart="@drawable/humidity"
-                    android:drawablePadding="10dp"
                     android:id="@+id/humidity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
+                    android:drawableStart="@drawable/humidity"
+                    android:drawablePadding="10dp"
                     android:text="@string/humidity"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -147,6 +146,12 @@
 
 
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_brightness_5_black_24dp" />
         </LinearLayout>
     </ScrollView>
 

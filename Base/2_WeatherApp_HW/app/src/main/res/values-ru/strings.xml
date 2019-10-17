@@ -5,7 +5,11 @@
     <string name="sunnyForWeather">Солнце для погоды</string>
     <string name="windForWeather">Ветер для погоды</string>
     <string name="humidityForWeather">Влажность для погоды</string>
-    <string name="ok">OK</string>
-    <string name="cancel">CANCEL</string>
+    <string name="ok">Применить</string>
+    <string name="cancel">Отменить</string>
     <string name="helpInputCity">Введите название города</string>
+    <string name="chance_of_rain">Вероятность дождя</string>
+    <string name="wind">Скорость ветра</string>
+    <string name="SwitchHumidity">Влажность воздуха</string>
+    <string name="cancelSetup">Вы отменили ввод города :(</string>
 </resources>
