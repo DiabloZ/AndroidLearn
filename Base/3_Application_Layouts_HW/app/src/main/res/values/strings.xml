@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name" translatable="false">3_Application_Layouts_HW</string>
+    <string name="currentCity">Moscow</string>
+    <string name="statusWeather">Sunny</string>
+    <string name="celsiusWeather" translatable="false">18</string>
+    <string name="unitWeatherCelsius" translatable="false">°C</string>
+    <string name="upperLineWeatherToday" translatable="false">↑19°</string>
+    <string name="bottomLineWeatherToday" translatable="false">↓17°</string>
+    <string name="humidity" translatable="false">80%</string>
+    <string name="windSpeed" translatable="false">3.4 m/s</string>
+    <string name="chanceOfRain" translatable="false">5%</string>
+    <string name="sunnyForWeather">sunForWeather</string>
+    <string name="windForWeather">windForWeather</string>
+    <string name="humidityForWeather">humidityForWeather</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="helpInputCity">Введите название города</string>
+    <string name="chance_of_rain">Chance of rain</string>
+    <string name="wind">Wind</string>
+    <string name="SwitchHumidity">Humidity</string>
+    <string name="cancelSetup">Your canceled input city :(</string>
+</resources>
