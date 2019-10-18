@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayout upPanelOptional;
 
+    protected static final String SAVE_INSTANCE_BUNDLE = "saveBundle";
     protected static final String SEND_SWITCH_TO_SETUP = "sendCode";
 
     @Override
@@ -71,6 +73,19 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putBundle(SAVE_INSTANCE_BUNDLE, getSwitchBundle());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        Bundle bundle = savedInstanceState.getBundle(SAVE_INSTANCE_BUNDLE);
+        if (bundle != null) switchChange(bundle);
+        super.onRestoreInstanceState(savedInstanceState);
     }
 
     private void switchChange(Bundle bundle) {
