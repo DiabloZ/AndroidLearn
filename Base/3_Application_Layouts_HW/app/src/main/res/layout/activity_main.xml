@@ -10,7 +10,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +21,6 @@
             android:layout_height="wrap_content"
             android:gravity="center|top"
             android:orientation="vertical">
-
             <LinearLayout
                 android:id="@+id/upPanelOptional"
                 android:layout_width="wrap_content"
@@ -36,8 +34,6 @@
                 app:layout_constraintHorizontal_bias="0.429"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
-
                 <TextView
                     android:id="@+id/chanceOfRain"
                     android:layout_width="wrap_content"
@@ -48,7 +44,6 @@
                     android:drawablePadding="10dp"
                     android:text="@string/chanceOfRain"
                     android:textSize="20sp" />
-
                 <TextView
                     android:id="@+id/speedWind"
                     android:layout_width="wrap_content"
@@ -59,8 +54,6 @@
                     android:drawablePadding="10dp"
                     android:text="@string/windSpeed"
                     android:textSize="20sp" />
-
-
                 <TextView
                     android:id="@+id/humidity"
                     android:layout_width="wrap_content"
@@ -72,7 +65,6 @@
                     android:text="@string/humidity"
                     android:textSize="20sp" />
             </LinearLayout>
-
             <TextView
                 android:id="@+id/currentCity"
                 android:layout_width="wrap_content"
@@ -83,7 +75,6 @@
                 app:layout_constraintEnd_toEndOf="@id/upPanelOptional"
                 app:layout_constraintStart_toStartOf="@id/upPanelOptional"
                 app:layout_constraintTop_toBottomOf="@id/upPanelOptional" />
-
             <TextView
                 android:id="@+id/statusWeather"
                 android:layout_width="wrap_content"
@@ -94,15 +85,12 @@
                 app:layout_constraintEnd_toEndOf="@+id/currentCity"
                 app:layout_constraintStart_toStartOf="@+id/currentCity"
                 app:layout_constraintTop_toBottomOf="@+id/currentCity" />
-
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="@+id/currentCity"
                 app:layout_constraintStart_toStartOf="@+id/currentCity"
                 app:layout_constraintTop_toBottomOf="@+id/statusWeather">
-
                 <TextView
                     android:id="@+id/valueWeather"
                     android:layout_width="wrap_content"
@@ -110,15 +98,12 @@
                     android:gravity="center_vertical"
                     android:text="@string/celsiusWeather"
                     android:textSize="125sp" />
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:orientation="vertical">
-
-
                     <TextView
                         android:id="@+id/unitWeather"
                         android:layout_width="match_parent"
@@ -126,7 +111,6 @@
                         android:text="@string/unitWeatherCelsius"
                         android:textSize="40sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:id="@+id/upperLineWeatherToday"
                         android:layout_width="match_parent"
@@ -134,7 +118,6 @@
                         android:text="@string/upperLineWeatherToday"
                         android:textSize="20sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:id="@+id/bottomLineWeatherToday"
                         android:layout_width="match_parent"
@@ -142,20 +125,16 @@
                         android:text="@string/bottomLineWeatherToday"
                         android:textSize="20sp"
                         android:textStyle="bold" />
-
                 </LinearLayout>
-
-
             </LinearLayout>
-
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/ic_brightness_5_black_24dp" />
+                android:src="@drawable/ic_brightness_5_black_24dp"
+                android:contentDescription="@string/statusWeatherImage" />
         </LinearLayout>
     </ScrollView>
-
     <Button
         android:id="@+id/btnSetup"
         android:layout_width="40dp"
@@ -167,6 +146,5 @@
         android:background="@drawable/ic_reorder_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

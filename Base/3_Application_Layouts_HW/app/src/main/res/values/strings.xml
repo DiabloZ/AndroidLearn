@@ -9,6 +9,7 @@
     <string name="humidity" translatable="false">80%</string>
     <string name="windSpeed" translatable="false">3.4 m/s</string>
     <string name="chanceOfRain" translatable="false">5%</string>
+    <string name="statusWeatherImage" translatable="false">statusWeatherImage</string>
     <string name="sunnyForWeather">sunForWeather</string>
     <string name="windForWeather">windForWeather</string>
     <string name="humidityForWeather">humidityForWeather</string>

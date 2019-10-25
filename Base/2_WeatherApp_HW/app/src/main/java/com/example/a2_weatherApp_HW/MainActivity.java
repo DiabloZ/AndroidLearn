@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 case (RESULT_OK):
                     Bundle bundle = data != null ? data.getBundleExtra(DATA_FOR_RETURN_KEY_BUNDLE) : null;
                     if (bundle != null) switchChange(bundle);
-                    if (!text.equals("")) currentCity.setText(text);
+                    if (text != null && !text.equals("")) currentCity.setText(text);
                     break;
                 case (RESULT_CANCELED):
                     break;
