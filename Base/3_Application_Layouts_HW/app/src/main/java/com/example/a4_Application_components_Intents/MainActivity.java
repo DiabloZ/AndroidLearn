@@ -1,4 +1,4 @@
-package com.example.a3_Application_Layouts_HW;
+package com.example.a4_Application_components_Intents;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import static com.example.a3_Application_Layouts_HW.SetupActivity.DATA_FOR_RETURN_KEY;
-import static com.example.a3_Application_Layouts_HW.SetupActivity.DATA_FOR_RETURN_KEY_BUNDLE;
-import static com.example.a3_Application_Layouts_HW.SetupActivity.DATA_KEY_CHANGE_OF_RAIN;
-import static com.example.a3_Application_Layouts_HW.SetupActivity.DATA_KEY_HUMIDITY;
-import static com.example.a3_Application_Layouts_HW.SetupActivity.DATA_KEY_WIND;
+import static com.example.a4_Application_components_Intents.SetupActivity.DATA_FOR_RETURN_KEY;
+import static com.example.a4_Application_components_Intents.SetupActivity.DATA_FOR_RETURN_KEY_BUNDLE;
+import static com.example.a4_Application_components_Intents.SetupActivity.DATA_KEY_CHANGE_OF_RAIN;
+import static com.example.a4_Application_components_Intents.SetupActivity.DATA_KEY_HUMIDITY;
+import static com.example.a4_Application_components_Intents.SetupActivity.DATA_KEY_WIND;
 
 public class MainActivity extends AppCompatActivity {
     private final int SECOND_ACTIVITY_REQUEST_CODE = 123;

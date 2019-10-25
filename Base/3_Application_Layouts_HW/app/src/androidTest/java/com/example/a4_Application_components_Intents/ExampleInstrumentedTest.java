@@ -1,4 +1,4 @@
-package com.example.a3_Application_Layouts_HW;
+package com.example.a4_Application_components_Intents;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.a3_Application_Layouts_HW", appContext.getPackageName());
+        assertEquals("com.example.a4_Application_components_Intents", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.example.a3_Application_Layouts_HW;
+package com.example.a4_Application_components_Intents;
 
 import org.junit.Test;
 
