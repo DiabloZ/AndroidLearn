@@ -17,4 +17,27 @@
         <item name="android:windowBackground">@color/windowBackgroundDark</item>
         <item name="android:textColor">@color/textDark</item>
     </style>
+    <style name="upPanel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:visibility">visible</item>
+    </style>
+    <style name="upPanelTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="currentCityTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textSize">30sp</item>
+    </style>
 </resources>
