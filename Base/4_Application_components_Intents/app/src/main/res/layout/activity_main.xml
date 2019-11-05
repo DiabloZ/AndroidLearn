@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nameCityField"
     android:layout_width="match_parent"
@@ -53,80 +52,48 @@
             <TextView
                 android:id="@+id/statusWeather"
                 android:text="@string/statusWeather"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/currentCity"
-                app:layout_constraintStart_toStartOf="@+id/currentCity"
-                app:layout_constraintTop_toBottomOf="@+id/currentCity" />
+                style="@style/statusWeatherTextView"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="@+id/currentCity"
-                app:layout_constraintStart_toStartOf="@+id/currentCity"
-                app:layout_constraintTop_toBottomOf="@+id/statusWeather">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/valueWeather"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
                     android:text="@string/celsiusWeather"
-                    android:textSize="125sp" />
+                    style="@style/valueWeatherTextView"/>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    style="@style/containerWeatherLinearLayout">
 
                     <TextView
                         android:id="@+id/unitWeather"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/unitWeatherCelsius"
-                        android:textSize="40sp"
-                        android:textStyle="bold" />
+                        style="@style/unitWeatherTextView"/>
 
                     <TextView
                         android:id="@+id/upperLineWeatherToday"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/upperLineWeatherToday"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        style="@style/lineWeatherTodayTextView"/>
 
                     <TextView
                         android:id="@+id/bottomLineWeatherToday"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:text="@string/bottomLineWeatherToday"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        style="@style/lineWeatherTodayTextView"/>
                 </LinearLayout>
             </LinearLayout>
 
             <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_margin="10dp"
+                android:src="@drawable/ic_brightness_5_black_24dp"
                 android:contentDescription="@string/statusWeatherImage"
-                android:src="@drawable/ic_brightness_5_black_24dp" />
+                style="@style/statusWeatherImageView"/>
         </LinearLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/btnSetup"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="5dp"
-        android:layout_marginTop="316dp"
-        android:layout_marginEnd="232dp"
         android:background="@drawable/ic_reorder_black_24dp"
+        style="@style/setupButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
