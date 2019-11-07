@@ -7,11 +7,13 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:background="@drawable/backgroundmap"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         tools:layout_editor_absoluteX="-5dp"
         tools:layout_editor_absoluteY="-100dp">
 
