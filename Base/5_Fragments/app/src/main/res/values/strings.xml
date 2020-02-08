@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">5_Fragments</string>
+    <string name="app_name" translatable="false">4_Application_components_Intents</string>
     <string name="currentCity">Moscow</string>
     <string name="statusWeather">Sunny</string>
     <string name="celsiusWeather" translatable="false">18</string>
