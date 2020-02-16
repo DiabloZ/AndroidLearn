@@ -1,4 +1,4 @@
-package com.example.a4_Application_components_Intents;
+package com.example.a5_Fragments;
 
 import org.junit.Test;
 

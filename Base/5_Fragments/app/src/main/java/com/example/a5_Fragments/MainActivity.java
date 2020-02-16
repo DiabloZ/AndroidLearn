@@ -1,4 +1,4 @@
-package com.example.a4_Application_components_Intents;
+package com.example.a5_Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,17 +6,22 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import static com.example.a4_Application_components_Intents.SetupActivity.DATA_FOR_RETURN_KEY;
-import static com.example.a4_Application_components_Intents.SetupActivity.DATA_FOR_RETURN_KEY_BUNDLE;
-import static com.example.a4_Application_components_Intents.SetupActivity.DATA_KEY_CHANGE_OF_RAIN;
-import static com.example.a4_Application_components_Intents.SetupActivity.DATA_KEY_HUMIDITY;
-import static com.example.a4_Application_components_Intents.SetupActivity.DATA_KEY_WIND;
+import static com.example.a5_Fragments.KeepState.DATA_FOR_RETURN_KEY;
+import static com.example.a5_Fragments.KeepState.DATA_FOR_RETURN_KEY_BUNDLE;
+import static com.example.a5_Fragments.KeepState.DATA_KEY_CHANGE_OF_RAIN;
+import static com.example.a5_Fragments.KeepState.DATA_KEY_HUMIDITY;
+import static com.example.a5_Fragments.KeepState.DATA_KEY_WIND;
+import static com.example.a5_Fragments.KeepState.SAVE_CITY_NAME;
+import static com.example.a5_Fragments.KeepState.SAVE_CITY_NAME_BUNDLE;
+import static com.example.a5_Fragments.KeepState.SAVE_INSTANCE_BUNDLE;
+import static com.example.a5_Fragments.KeepState.SEND_SWITCH_TO_SETUP;
 
 public class MainActivity extends AppCompatActivity {
     private final int SECOND_ACTIVITY_REQUEST_CODE = 123;
@@ -25,11 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayout upPanelOptional;
 
-    private static final String SAVE_CITY_NAME = "saveCity";
-    private static final String SAVE_CITY_NAME_BUNDLE = "saveCityBundle";
-    protected static final String SAVE_INSTANCE_BUNDLE = "saveBundle";
-    protected static final String SEND_SWITCH_TO_SETUP = "sendCode";
-
+    private KeepState ks = new KeepState();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void createAndOpenNewActivitySetResult() {
         Intent data = new Intent(MainActivity.this, SetupActivity.class);
-        Bundle arguments = getSwitchBundle();
+        Bundle arguments = ks.getSwitchBundleMain(humidity, speedWind, chanceOfRain);
         data.putExtra(SEND_SWITCH_TO_SETUP, arguments);
         setResult(RESULT_OK);
         startActivityForResult(data, SECOND_ACTIVITY_REQUEST_CODE, arguments);
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         Log.d(this.getClass().getSimpleName(), "сохраняем состояние");
         outState.putBundle(SAVE_CITY_NAME_BUNDLE, getCityName());
-        outState.putBundle(SAVE_INSTANCE_BUNDLE, getSwitchBundle());
+        outState.putBundle(SAVE_INSTANCE_BUNDLE, ks.getSwitchBundleMain(humidity, speedWind, chanceOfRain));
         super.onSaveInstanceState(outState);
         Log.d(this.getClass().getSimpleName(), "сохранили состояние");
     }
@@ -130,14 +131,7 @@ public class MainActivity extends AppCompatActivity {
         return chanceOfRain.getVisibility() == View.GONE && speedWind.getVisibility() == View.GONE && humidity.getVisibility() == View.GONE;
     }
 
-    private Bundle getSwitchBundle() {
-        Log.d(this.getClass().getSimpleName(), "пакуем состояние свичей в бандл");
-        Bundle arguments = new Bundle();
-        arguments.putBoolean(DATA_KEY_HUMIDITY, humidity.getVisibility() == View.VISIBLE);
-        arguments.putBoolean(DATA_KEY_WIND, speedWind.getVisibility() == View.VISIBLE);
-        arguments.putBoolean(DATA_KEY_CHANGE_OF_RAIN, chanceOfRain.getVisibility() == View.VISIBLE);
-        return arguments;
-    }
+
 
     private Bundle getCityName() {
         Log.d(this.getClass().getSimpleName(), "сохраняем название города");

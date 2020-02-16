@@ -1,4 +1,4 @@
-package com.example.a4_Application_components_Intents;
+package com.example.a5_Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,17 +11,19 @@ import android.widget.Switch;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.a5_Fragments.KeepState.DATA_FOR_RETURN_KEY;
+import static com.example.a5_Fragments.KeepState.DATA_KEY_CHANGE_OF_RAIN;
+import static com.example.a5_Fragments.KeepState.DATA_KEY_HUMIDITY;
+import static com.example.a5_Fragments.KeepState.DATA_KEY_WIND;
+import static com.example.a5_Fragments.KeepState.SEND_SWITCH_TO_SETUP;
+
 public class SetupActivity extends AppCompatActivity {
 
-    protected final static String DATA_FOR_RETURN_KEY = "dataForReturn";
-    protected final static String DATA_FOR_RETURN_KEY_BUNDLE = "DATA_FOR_RETURN_KEY_BUNDLE";
-    protected final static String DATA_KEY_CHANGE_OF_RAIN = "DATA_KEY_CHANGE_OF_RAIN";
-    protected final static String DATA_KEY_WIND = "DATA_KEY_WIND";
-    protected final static String DATA_KEY_HUMIDITY = "DATA_KEY_HUMIDITY";
 
     private EditText editChangeCity;
     private Button okBtn, cancelBtn;
     private Switch switchChangeOfRain, switchWind, switchHumidity;
+    private KeepState ks = new KeepState();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,11 +33,12 @@ public class SetupActivity extends AppCompatActivity {
         initViews();
         setBehaviourForMainActBtn();
         intentParse(getIntent());
+
     }
 
     private void intentParse(Intent intent) {
         Log.d(this.getClass().getSimpleName(), "получаем значения из интента");
-        Bundle bundle = intent.getBundleExtra(MainActivity.SEND_SWITCH_TO_SETUP);
+        Bundle bundle = intent.getBundleExtra(SEND_SWITCH_TO_SETUP);
         if (bundle != null) {
             switchMemory(bundle);
         }
@@ -68,7 +71,7 @@ public class SetupActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d(this.getClass().getSimpleName(), "обрабатываем нажатие на ОК");
                 String text = editChangeCity.getText().toString();
-                Intent data = getIntentToSend();
+                Intent data = ks.getIntentToSend(switchChangeOfRain,switchWind,switchHumidity);
                 data.putExtra(DATA_FOR_RETURN_KEY, text);
                 setResult(RESULT_OK, data);
                 finish();
@@ -78,27 +81,10 @@ public class SetupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(this.getClass().getSimpleName(), "обрабатываем нажатие на CANCEL");
-                Intent data = getIntentToSend();
+                Intent data = ks.getIntentToSend(switchChangeOfRain,switchWind,switchHumidity);
                 setResult(RESULT_CANCELED, data);
                 finish();
             }
         });
-    }
-
-    private Intent getIntentToSend() {
-        Log.d(this.getClass().getSimpleName(), "создаем intent для отправки");
-        Intent data = new Intent();
-        Bundle arguments = getSwitchBundle();
-        data.putExtra(DATA_FOR_RETURN_KEY_BUNDLE, arguments);
-        return data;
-    }
-
-    private Bundle getSwitchBundle() {
-        Log.d(this.getClass().getSimpleName(), "отправляем новое состояние свичей");
-        Bundle arguments = new Bundle();
-        arguments.putBoolean(DATA_KEY_CHANGE_OF_RAIN, switchChangeOfRain.isChecked());
-        arguments.putBoolean(DATA_KEY_WIND, switchWind.isChecked());
-        arguments.putBoolean(DATA_KEY_HUMIDITY, switchHumidity.isChecked());
-        return arguments;
     }
 }

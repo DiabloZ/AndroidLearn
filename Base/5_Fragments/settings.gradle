@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='4_Application_components_Intents'
+rootProject.name='5_Fragments'
