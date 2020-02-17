@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -30,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayout upPanelOptional;
 
-    private KeepState ks = new KeepState();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void createAndOpenNewActivitySetResult() {
         Intent data = new Intent(MainActivity.this, SetupActivity.class);
-        Bundle arguments = ks.getSwitchBundleMain(humidity, speedWind, chanceOfRain);
+        Bundle arguments = getSwitchBundleMain(humidity, speedWind, chanceOfRain);
         data.putExtra(SEND_SWITCH_TO_SETUP, arguments);
         setResult(RESULT_OK);
         startActivityForResult(data, SECOND_ACTIVITY_REQUEST_CODE, arguments);
@@ -92,9 +90,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         Log.d(this.getClass().getSimpleName(), "сохраняем состояние");
         outState.putBundle(SAVE_CITY_NAME_BUNDLE, getCityName());
-        outState.putBundle(SAVE_INSTANCE_BUNDLE, ks.getSwitchBundleMain(humidity, speedWind, chanceOfRain));
+        outState.putBundle(SAVE_INSTANCE_BUNDLE, getSwitchBundleMain(humidity, speedWind, chanceOfRain));
         super.onSaveInstanceState(outState);
         Log.d(this.getClass().getSimpleName(), "сохранили состояние");
+    }
+    Bundle getSwitchBundleMain(TextView humidity, TextView speedWind, TextView chanceOfRain) {
+        Log.d(this.getClass().getSimpleName(), "пакуем состояние свичей в бандл");
+        Bundle arguments = new Bundle();
+        arguments.putBoolean(DATA_KEY_HUMIDITY, humidity.getVisibility() == View.VISIBLE);
+        arguments.putBoolean(DATA_KEY_WIND, speedWind.getVisibility() == View.VISIBLE);
+        arguments.putBoolean(DATA_KEY_CHANGE_OF_RAIN, chanceOfRain.getVisibility() == View.VISIBLE);
+        return arguments;
     }
 
     @Override
