@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView tvOut;
@@ -52,6 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tvOut.setText("Нажата кнопка Cancel");
                 break;
         }
-
+        Toast.makeText(this, tvOut.getText(),Toast.LENGTH_SHORT).show();
     }
 }
