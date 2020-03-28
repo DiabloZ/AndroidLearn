@@ -26,6 +26,7 @@
             <option value="$PROJECT_DIR$/p013_menusimple" />
             <option value="$PROJECT_DIR$/p014_menuadv" />
             <option value="$PROJECT_DIR$/p015_contextmenu" />
+            <option value="$PROJECT_DIR$/p016_dynamiclayout" />
             <option value="$PROJECT_DIR$/p0180_constraintlayoutintro" />
           </set>
         </option>
