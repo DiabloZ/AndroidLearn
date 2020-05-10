@@ -27,7 +27,8 @@
             <option value="$PROJECT_DIR$/p014_menuadv" />
             <option value="$PROJECT_DIR$/p015_contextmenu" />
             <option value="$PROJECT_DIR$/p016_dynamiclayout" />
-            <option value="$PROJECT_DIR$/p0180_constraintlayoutintro" />
+            <option value="$PROJECT_DIR$/p017_dynamiclayout2" />
+            <option value="$PROJECT_DIR$/p018_dynamiclayout3" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
